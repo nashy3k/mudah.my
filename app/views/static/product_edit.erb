@@ -45,8 +45,9 @@
 
 			<div style="position: absolute; left: 450px; top: 300px;">
 				<form action='/products/<%= @product.id %>/edit' method="post">
-						<input type='text' name='product[title]' value= "<%= @product.title %>" autocomplete="off" autocorrect="off" autocapitalize="off"><br>
-						<input type='text' name='product[description]' value= "<%= @product.description %>" autocomplete="off" autocorrect="off" autocapitalize="off"><br>
+						<input type='text' name='product[title]' value= "<%= @product.title %>" placeholder="<%= @product.title %>" autocomplete="off" autocorrect="off" autocapitalize="off"><br>
+						<input type='text' name='product[description]' value= "<%= @product.description %>" placeholder="Description" autocomplete="off" autocorrect="off" autocapitalize="off"><br>
+						<input type='text' name='product[price]' value= "<%= @product.price %>" autocomplete="off" placeholder="Price" autocorrect="off" autocapitalize="off"><br>						
 						<button type="submit" class="btn btn-primary" id="product_update"> Update 
 						</button>							
 				</form>

@@ -45,10 +45,11 @@
 	</header>
 
 	<div id="datatable" style="position: absolute; left: 550px; top: 200px;">
-	<p> <%= @product.title %> by <%= @product.user.username %> </p>
-	<p> <%= @product.description %> when <%= @product.created_at %> </p>
+	<p> product: <%= @product.title %> by <%= @product.user.username %> </p>
+	<p> description: <%= @product.description %> when <%= @product.created_at %> </p>
+	<p> price: <%= @product.price %> </p>
 
-		<div style="position: absolute; left: 10px; top: 50px;">
+		<div style="position: absolute; left: 10px; top: 80px;">
 			<table class="table table-hover" >
 				<thead id="thead">
 		      <tr>
@@ -68,7 +69,7 @@
 		    </tbody>
 		  </table>
 		</div>
-		<div id="productform" style="position: relative; left: 250px; bottom: 55px;">
+		<div id="productform" style="position: relative; left: 300px; bottom: 90px;">
 			<form action='/products/<%= @product.id %>/favourites' method="post">
 				<input type='text' name='favourites[status]' placeholder="1" autocomplete="off" autocorrect="off" autocapitalize="off"><br>
 				<button type="submit" class="btn btn-primary" id="favouriteproduct" style="position: relative; left: 170px; bottom: 30px;"> Favourite 

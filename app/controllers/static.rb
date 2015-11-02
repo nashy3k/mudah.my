@@ -118,7 +118,7 @@ end
 post '/products/:id/edit' do
 	#update a Product
 	@product = Product.find(params[:id])
-	@product.update_attributes(title: params[:product][:title], description: params[:product][:description])
+	@product.update_attributes(title: params[:product][:title], description: params[:product][:description],price: params[:product][:price])
 	if @product
 		redirect to '/products'
 		# return @url.to_json

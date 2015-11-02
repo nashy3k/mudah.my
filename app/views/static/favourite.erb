@@ -46,6 +46,7 @@
 			<div style="position: absolute; left: 550px; top: 200px;">
 						<span>"<%= @product.title %>" </span><br>
 						<span>"<%= @product.description %>" </span><br>
+						<span>"<%= @product.price %>" </span><br>						
 						<span>"<%= @favourite.status %>" </span><br>
 						<a href="/products/<%= @product.id %>/favourites/<%= @favourite.id %>/edit"> Unfavourite </a>	
 						<form action="/products/<%= @product.id %>/favourites/<%= @favourite.id %>" method="post">

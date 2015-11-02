@@ -44,8 +44,9 @@
 	</header>
 
 			<div style="position: absolute; left: 550px; top: 200px;">
-						<span> "<%= @product.title %>" </span><br>
-						<span>"<%= @product.description %>" </span><br>
+						<span> Product: "<%= @product.title %>" </span><br>
+						<span> Description: "<%= @product.description %>" </span><br>
+						<span> Price: "<%= @product.price %>" </span><br>						
 						<a href="/products/<%= @product.id %>/edit"> Update </a>	
 						<form action="/products/<%= @product.id %>" method="post">
 						  <div style="margin:0;padding:0">

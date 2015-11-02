@@ -51,6 +51,7 @@
 		      <tr>
 		        <th style="width:130px">Favourite</th>
 		        <th style="width:130px">Product</th>
+		        <th style="width:130px">Price</th>
 		        <th style="width:130px">when</th>
 		      </tr>
 		    </thead>
@@ -59,6 +60,7 @@
 						<tr>
 							<td style="width:130px"> <%= t.status %> </td>
 							<td style="width:130px"> <%= t.product.title %> </td>
+							<td style="width:130px"> <%= t.product.price %> </td>							
 							<td style="width:130px"> <%= t.created_at %> </td>
 		    		</tr>
 					<% end %>

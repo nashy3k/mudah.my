@@ -58,6 +58,7 @@
 	      <tr>
 	        <th>Who posted</th>
 	        <th>Product</th>
+	        <th>Price</th>
 	        <th>when</th>
 	      </tr>
 	    </thead>
@@ -66,6 +67,7 @@
 					<tr>
 						<td data-toggle="tooltip" title="show all products of username"><a href="/user/<%= t.user.id %>/products/"> <%= t.user.username %> </a> </td>
 						<td data-toggle="tooltip" title="product.title"><a href="/products/<%= t.id %>"> <%= t.title %> </a> </td>
+						<td data-toggle="tooltip" title="product.price"><a href="/products/<%= t.price %>"> <%= t.price %> </a> </td>						
 						<td data-toggle="tooltip" title="product.created_at"><%= t.created_at %> </td>
 	    		</tr>
 				<% end %>

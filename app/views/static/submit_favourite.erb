@@ -45,7 +45,7 @@
 	</header>
 
 	<div id="datatable" style="position: absolute; left: 550px; top: 200px;">
-	<p> <%= @product.title %> </p>
+	<p> <%= @product.title %> <%= @product.price %></p>
 		<div>
 			<form action='/products/<%= @product.id %>/favourites' method="post">
 				<input type='text' name='favourite[status]' value= "1" placeholder="1" autocomplete="off" autocorrect="off" autocapitalize="off"><br>
