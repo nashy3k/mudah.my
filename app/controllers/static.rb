@@ -159,7 +159,8 @@ post "/products/:p_id/favourites" do
 		redirect to "/products/#{params[:p_id]}/favourites"
 		# return @url.to_json        
 	else
-		redirect to "/products/#{params[:p_id]}/favourites/new"
+		# redirect to "/products/#{params[:p_id]}/favourites/new"
+		erb :"static/not_allowed"
 	end
 end
 
