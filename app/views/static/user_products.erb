@@ -59,7 +59,7 @@
 	    <tbody>
 			<% @products.find_each do |t| %>
 			<tr>
-				<td> "<%= t.title %>" </td>
+				<td> <a href="/products/<%= t.id %>/favourites"> <%= t.title %> </a> </td>
 				<td> "<%= t.description %>" </td>
 				<td> "<%= t.created_at %> " </td>
 				<td> <a href="/products/<%= t.id %>/edit"> Update </a>	</td>
