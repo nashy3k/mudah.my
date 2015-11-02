@@ -14,7 +14,6 @@
 
 </head>
 
-<div>
 <body>
 
 	<header id="header" data-template="stage-header" class=" header-transparent">
@@ -30,31 +29,23 @@
 					</h1>
 			</div>
 			<br>
-			<h1> Welcome to the next bigger app </h1>
+			<h1> Profile </h1><br>
+			<h2> Please edit your Profile </h2>
 			</div>
 		</div>
 	</header>
 
-<div>
-<h1 style="position: absolute; left: 180px; top: 200px;">New User Signup</h1> <h1 style="position: absolute; right: 180px; top: 200px;">User Login</h1>
-</div>
-
-			<div style="position: absolute; left: 180px; top: 300px;">
-				<form action='/signup' method="post">
-						<input type='text' name='user[email]' placeholder="Email" autocomplete="off" autocorrect="off" autocapitalize="off"><br>
-						<input type='text' name='user[password]' placeholder="Password" autocomplete="off" autocorrect="off" autocapitalize="off"></br>
-						<button type="submit" class="btn btn-primary" id="signup"> Signup 
+			<div style="position: absolute; left: 450px; top: 300px;">
+				<form action='/profile' method="post">
+						<input type='text' name='user[username]' placeholder="Username" autocomplete="off" autocorrect="off" autocapitalize="off"><br>
+						<input type='text' name='user[first_name]' placeholder="First name" autocomplete="off" autocorrect="off" autocapitalize="off"><br>
+						<input type='text' name='user[last_name]' placeholder="Last name" autocomplete="off" autocorrect="off" autocapitalize="off"><br>
+						<input type='text' name='user[email]' value= "<%= @user.email %>" autocomplete="off" autocorrect="off" autocapitalize="off"><br>
+						<input type='text' name='user[password]' value= "<%= @user.password %>" autocomplete="off" autocorrect="off" autocapitalize="off"></br>
+						<button type="submit" class="btn btn-primary" id="signup"> update 
 						</button>							
 				</form>
 			</div>
 
-			<div style="position: absolute; right: 180px; top: 300px;">
-				<form action='/login' method="post">
-						<input type='text' name='user[email]' placeholder="Email" autocomplete="off" autocorrect="off" autocapitalize="off"><br>
-						<input type='text' name='user[password]' placeholder="Password" autocomplete="off" autocorrect="off" autocapitalize="off"></br>
-						<button type="submit" class="btn btn-primary" id="login"> Login 
-						</button>							
-				</form>
-			</div>
+
 </body>
-</div>

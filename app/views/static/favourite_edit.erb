@@ -14,7 +14,6 @@
 
 </head>
 
-<div>
 <body>
 
 	<header id="header" data-template="stage-header" class=" header-transparent">
@@ -23,38 +22,33 @@
 				<img id="brand_nash" src="/img/brand_nash.gif">
 			</div>	
 			<div> 
-					<h1 id="header-logo" class="bitly" >
-						<a href="/" rel="no follow"> 
-							<span> Mudah.my </span>
-						</a>
-					</h1>
+				<h1 id="header-logo" class="quora" >
+					<a href="/products" rel="no follow"> 
+						<span> Mudah.my </span>
+					</a>
+				</h1>
+				<h1 id='username_head'> <%= current_user.username%> </h1>
+				<h3 style="position: absolute; right: 50px; top: 30px;" data-toggle="tooltip" title="show all products of user"><a href="/user/<%= current_user.id %>/products/"> All my Products </a>
+				</h3>
+				<h3 style="position: absolute; right: 50px; top: 60px;" data-toggle="tooltip" title="show all favourites of user"><a href="/user/<%= current_user.id %>/favourites/"> All my Favourites </a>
+				</h3>
+				<h3 style="position: absolute; right: 50px; top: 90px;" data-toggle="tooltip" title="show all categories of user"><a href="/user/<%= current_user.id %>/categories/"> All my Categories </a>
+				</h3>
+				<h5 id='logout_head' style="position: absolute; right: 100px; top: 130px;"> 
+					<a href="/logout">
+						<span> Logout </span>
+					</a>
+				</h5>
 			</div>
 			<br>
-			<h1> Welcome to the next bigger app </h1>
-			</div>
-		</div>
 	</header>
 
-<div>
-<h1 style="position: absolute; left: 180px; top: 200px;">New User Signup</h1> <h1 style="position: absolute; right: 180px; top: 200px;">User Login</h1>
-</div>
-
-			<div style="position: absolute; left: 180px; top: 300px;">
-				<form action='/signup' method="post">
-						<input type='text' name='user[email]' placeholder="Email" autocomplete="off" autocorrect="off" autocapitalize="off"><br>
-						<input type='text' name='user[password]' placeholder="Password" autocomplete="off" autocorrect="off" autocapitalize="off"></br>
-						<button type="submit" class="btn btn-primary" id="signup"> Signup 
+			<div style="position: absolute; left: 450px; top: 300px;">
+				<form action='/products/<%= @product.id %>/favourites/<%= @favourite.id %>/edit' method="post">
+						<input type='text' name='favourite[status]' value= "0" autocomplete="on" autocorrect="off" autocapitalize="off"><br>
+						<button type="submit" class="btn btn-primary" id="favourite_update"> Unfavourite 
 						</button>							
 				</form>
 			</div>
 
-			<div style="position: absolute; right: 180px; top: 300px;">
-				<form action='/login' method="post">
-						<input type='text' name='user[email]' placeholder="Email" autocomplete="off" autocorrect="off" autocapitalize="off"><br>
-						<input type='text' name='user[password]' placeholder="Password" autocomplete="off" autocorrect="off" autocapitalize="off"></br>
-						<button type="submit" class="btn btn-primary" id="login"> Login 
-						</button>							
-				</form>
-			</div>
 </body>
-</div>
